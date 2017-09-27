@@ -1,4 +1,11 @@
+# ###
+# Configuration file for ZSH by Yamifrankc
+# Made mostly from zsh's own configuration tool and from snipets found around the web
+# contact: Yami@yamifrankc.com
+# ###
 
+
+export EDITOR='vim'
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -17,10 +24,22 @@ promptinit
 
 source ~/.zsh/secretalliases
 
+
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 #alias ls='ls --color=auto -la'
 alias ls='ls++ -A'
+alias tmxa='tmux attach'
+alias tmxd='tmux detach'
+
+# Aliases for safer rm command, basically a recycle bin
+alias rm='trash-put'
+alias trashls='trash-list'
+alias unrm='trash-restore'
+alias trashcya='trash-empty'
+
+# aliases for git
+alias gitcom='git commit -m $2'
 
 zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES
