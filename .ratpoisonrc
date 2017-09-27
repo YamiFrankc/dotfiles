@@ -1,1 +1,10 @@
+## .ratpoisonrc configuration file for Ratpoison WM
+# By YamiFrankc, contact at yami@yamifrankc.com
+##
+
+# Execute script for wallpaper and monitor setup
+exec /home/yamifrannkc/xstart.sh
+
+# Set scape key to Ctrl-S
+escape C-s
 
