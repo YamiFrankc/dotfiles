@@ -48,8 +48,14 @@ setopt COMPLETE_ALIASES
 
 ## Custom OC PRomt Do not STEAL
 
-PROMPT='%F{red}%n%f@%F{blue}%m%f %F{yellow}%1~%f %# '
+#PROMPT='%F{red}%n%f@%F{blue}%m%f [%T](%F{yellow}%~%f )%# '
 #RPROMPT='[%F{yewllow}%?%F]'
+
+
+PROMPT='%F{blue}┌─[%F{red}%n%f@%F{green}%M%F{blue}]─[%f%T%F{blue}]─(%F{yellow}%~%F{blue})
+└─| %F{green}%# %F{blue}> %f'
+#PROMPT=$'%B%{\e[0;36m%}┌─[%{\e[0;31m%}%n%{\e[0;36m%}]──(%{\e[0;33m%}%~%{\e[0;36m%})\n└─|%{\e[0;32m%} %# %{\e[0;36m%}>%b'
+
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # End of lines added by compinstall
@@ -422,3 +428,4 @@ _zsh_highlight_add-highlighter _zsh_main-highlight _zsh_highlight_buffer-modifie
 # Load additional highlighters if available.
 _zsh_highlight_load-highlighters "${${(%):-%N}:h}/highlighters"
 
+export PATH=~/bin:$PATH
